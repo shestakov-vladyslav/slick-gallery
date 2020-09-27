@@ -1,6 +1,6 @@
 # my-slick-gallery
 
-Installation
+Installation 
 ----
 
 1. Add assets to your page
