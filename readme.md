@@ -1,6 +1,7 @@
 # my-slick-gallery
 
-### Installation
+Installation
+----
 
 1. Add assets to your page
 
@@ -22,9 +23,38 @@
 </div>
 ```
 
-3. This is all!
+3. That's all! Enjoy your full-screen gallery.
 
-### Customize
+Customize
+----
+
+```sh
+$primary_color: #333;
+$secondary_color: #eee;
+
+div.slick-box{
+    &__arrow{ /* Arrow background */
+        background: $secondary_color;
+
+        svg line{ /* Arrow color */
+            stroke: $primary_color;
+        }
+
+        &--next,
+        &--prev{ /* Arrow border */
+            border-right: 4px solid $primary_color;
+        }
+    }
+    
+    &__preview{ /* Preview box background color */
+        background: $primary_color;
+    }
+
+    &__close{ /* Close button background */
+        background: $primary_color;
+    }
+}
+```
 
 License
 ----
