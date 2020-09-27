@@ -54,6 +54,8 @@ $secondary_color: #eee;
         transition: opacity .3s;
         cursor: pointer;
         flex-shrink: 0;
+        position: relative;
+        z-index: 3;
 
         @media (max-width: 768px){
             width: 60px;
