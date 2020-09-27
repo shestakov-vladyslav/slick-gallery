@@ -6,8 +6,8 @@ Installation
 1. Add assets to your page
 
 ```sh
-<script src="https://cdn.jsdelivr.net/npm/my-slick-gallery@1.0.0/slick-gallery.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/my-slick-gallery@1.0.0/slick-gallery.min.css">
+<script src="https://cdn.jsdelivr.net/npm/my-slick-gallery@1.0.1/slick-gallery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/my-slick-gallery@1.0.1/slick-gallery.min.css">
 ```
 
 2. Add a "slick-gallery" class to slick element.
@@ -29,7 +29,7 @@ Installation
 
 Customize
 ----
-
+Example scss styles to adapt the appearance to your site.
 ```sh
 $primary_color: #333;
 $secondary_color: #eee;
@@ -62,4 +62,5 @@ License
 ----
 
 MIT
+
 **Free Software, Hell Yeah!**
