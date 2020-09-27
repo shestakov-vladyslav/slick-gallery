@@ -97,6 +97,10 @@ $secondary_color: #eee;
             height: 100%;
         }
 
+        div{
+            outline: none;
+        }
+
         &.slick-initialized .slick-slide,
         &.slick-initialized .slick-slide div{
             display: flex !important;
