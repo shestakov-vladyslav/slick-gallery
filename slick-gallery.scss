@@ -97,10 +97,6 @@ $secondary_color: #eee;
             height: 100%;
         }
 
-        div{
-            outline: none;
-        }
-
         &.slick-initialized .slick-slide,
         &.slick-initialized .slick-slide div{
             display: flex !important;
@@ -121,6 +117,10 @@ $secondary_color: #eee;
 
         @media (max-width: 768px){
             display: none;
+        }
+
+        div{
+            outline: none;
         }
 
         &.slick-initialized .slick-slide{
