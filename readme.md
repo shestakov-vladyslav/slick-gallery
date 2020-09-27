@@ -25,6 +25,8 @@ Installation
 
 3. That's all! Enjoy your full-screen gallery.
 
+![Screenshot](https://telegra.ph/file/bd4c7dbe2f4440c792a1f.png)
+
 Customize
 ----
 
