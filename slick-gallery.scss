@@ -1,0 +1,212 @@
+$primary_color: #4E708A;
+$secondary_color: #eee;
+
+.slick-gallery.slick-initialized .slick-slide img{
+    cursor: pointer;
+    transition: opacity .3s;
+
+    &:hover{
+        opacity: .7;
+    }
+}
+
+.slick-box{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 10px 0;
+    box-sizing: border-box;
+
+    @media (max-width: 768px){
+        overflow-y: auto;
+        padding-bottom: 20px;
+    }
+
+    img{
+        transform: translateZ(0);
+    }
+
+    &--active{
+        display: block;
+    }
+
+    &__content{
+        position: relative;
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    &__arrow{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        width: 100px;
+        height: 100px;
+        background: $secondary_color;
+        transition: opacity .3s;
+        cursor: pointer;
+        flex-shrink: 0;
+
+        @media (max-width: 768px){
+            width: 60px;
+            height: 60px;
+        }
+
+        &:hover{
+            opacity: .7;
+        }
+
+        svg line{
+            stroke: $primary_color;
+        }
+
+        &--next{
+            border-right: 4px solid $primary_color;
+            justify-self: flex-end;
+        }
+
+        &--prev{
+            border-right: 4px solid $primary_color;
+            transform: rotate(180deg);
+        }
+    }
+
+    &__frame{
+        overflow: hidden;
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &,
+        .slick-list,
+        .slick-track,
+        .slick-slide,
+        .slick-slide div{
+            height: 100%;
+        }
+
+        &.slick-initialized .slick-slide,
+        &.slick-initialized .slick-slide div{
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__preview{
+        background: $primary_color;
+        padding: 15px 10px;
+        margin: 20px -10px 0;
+
+        @media (max-width: 768px){
+            display: none;
+        }
+
+        &.slick-initialized .slick-slide{
+            display: flex;
+            justify-content: center;
+
+            div{
+                height: 100%;
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+            }
+
+            img{
+                max-height: 100%;
+            }
+        }
+        
+        .slick-track{
+            display: flex;
+            align-items: center;
+            height: 130px;
+            margin: 0;
+            overflow: hidden;
+
+            .slick-slide{
+                margin: 0 10px;
+
+                img{
+                    cursor: pointer;
+                    transition: opacity .3s;
+                    opacity: .5;
+                }
+
+                &:hover{
+                    img{
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .slick-slide.slick-current{
+                img{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__row{
+        display: grid;
+        grid-template-columns: 100px minmax(0, 1fr) 100px;
+        grid-gap: 20px;
+        align-items: center;
+        height: calc(100vh - 300px);
+
+        @media (max-width: 768px){
+            grid-template-columns: 1fr;
+            height: auto;
+        }
+    }
+
+    &__close{
+        position: absolute;
+        top: -120px;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background: $primary_color;
+        cursor: pointer;
+        transition: opacity .3s;
+
+        &:hover{
+            opacity: .8;
+        }
+
+        &:before,
+        &:after{
+            content: '';
+            position: absolute;
+            top: calc(50% - 16px);
+            left: calc(50% - 1px);
+            background: #fff;
+            height: 33px;
+            width: 2px;
+        }
+
+        &:before{
+            transform: rotate(45deg);
+        }
+
+        &:after{
+            transform: rotate(-45deg);
+        }
+    }
+}

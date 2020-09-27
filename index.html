@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Slick Gallery - Demo
+    </title>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+</head>
+<body>
+    <div class="block">
+        <div class="mySlider slick-gallery">
+            <div><img src="images/1.jpg" alt=""></div>
+            <div><img src="images/2.jpg" alt=""></div>
+            <div><img src="images/3.jpg" alt=""></div>
+            <div><img src="images/4.jpg" alt=""></div>
+            <div><img src="images/5.jpg" alt=""></div>
+            <div><img src="images/6.jpg" alt=""></div>
+        </div>
+    </div>
+
+    <style>
+        body{
+            background: #eee;
+        }
+
+        img{
+            max-width: 100%;
+        }
+
+        .block{
+            width: 1200px;
+            background: #fff;
+            box-shadow: 0 0 8px rgba(0, 0, 0, .18);
+            padding: 25px;
+            margin: 50px auto;
+        }
+    </style>
+
+    <script>
+        (($) => {
+            $(document).ready(() => {
+                $('.mySlider').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: true,
+                    adaptiveHeight: true
+                });
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>
