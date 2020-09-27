@@ -1,6 +1,6 @@
 {
   "name": "my-slick-gallery",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "slick-gallery.js",
   "dependencies": {
