@@ -113,7 +113,6 @@ let SlickGallery = (() => {
             dots: false,
             arrows: false,
             initialSlide: index,
-            variableWidth: true,
             asNavFor: $(_classes.preview_box)
         });
 
