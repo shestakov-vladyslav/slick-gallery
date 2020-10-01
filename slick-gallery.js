@@ -161,7 +161,7 @@ let SlickGallery = (() => {
 
     let _hideGallery = () => {
         $(_classes.slick_box).removeClass('slick-box--active');
-        $('body').css('overflow', '');
+        $('html, body').css('overflow', '');
     };
 
     let _showPrev = () => {
