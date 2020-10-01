@@ -136,10 +136,6 @@ let SlickGallery = (() => {
             ]
         });
 
-        setTimeout(function(){
-            $(window).trigger('resize');
-        }, 0);
-
         $(window).on('keyup', _onKeyPress);
 
         $image_frame.off();
@@ -151,11 +147,11 @@ let SlickGallery = (() => {
 
     let _showGallery = ($slider, $img) => {
         $(_classes.slick_box).addClass('slick-box--active');
-        $('body').css('overflow', 'hidden');
+        $('html, body').css('overflow', 'hidden');
 
         _config.$slider = $slider;
 
-        setTimeout(() => _initSliders($img), 0);
+        setTimeout(() => _initSliders($img), 150);
     };
 
     let _hideGallery = () => {
