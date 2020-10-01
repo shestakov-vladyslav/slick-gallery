@@ -102,7 +102,6 @@ $secondary_color: #eee;
             display: flex !important;
             justify-content: center;
             align-items: center;
-            width: 100%;
         }
 
         img{
@@ -173,7 +172,7 @@ $secondary_color: #eee;
 
     &__row{
         display: grid;
-        grid-template-columns: 100px minmax(0, 1fr) 100px;
+        grid-template-columns: 135px minmax(0, 1fr) 135px;
         grid-gap: 20px;
         align-items: center;
         height: calc(100vh - 300px);

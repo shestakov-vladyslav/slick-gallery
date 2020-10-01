@@ -136,6 +136,10 @@ let SlickGallery = (() => {
             ]
         });
 
+        setTimeout(function(){
+            $(window).trigger('resize');
+        }, 0);
+
         $(window).on('keyup', _onKeyPress);
 
         $image_frame.off();
