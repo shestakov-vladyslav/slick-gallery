@@ -1,13 +1,16 @@
 # my-slick-gallery
+Demo
+----
+https://vladshestakov.github.io/slick-gallery/
 
-Installation 
+Installation
 ----
 
 1. Add assets to your page
 
 ```sh
-<script src="https://cdn.jsdelivr.net/npm/my-slick-gallery@1.0.4/slick-gallery.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/my-slick-gallery@1.0.4/slick-gallery.min.css">
+<script src="https://cdn.jsdelivr.net/npm/my-slick-gallery@1.0.5/slick-gallery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/my-slick-gallery@1.0.5/slick-gallery.min.css">
 ```
 
 2. Add a "slick-gallery" class to slick element.
