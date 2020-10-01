@@ -136,8 +136,10 @@ let SlickGallery = (() => {
             ]
         });
 
-        _config.$image_frame.slick("refresh");
-        _config.$previewSlick.slick("refresh");
+        setTimeout(function(){
+            $image_frame.slick("refresh");
+            $preview_box.slick("refresh");
+        }, 250);
 
         $(window).on('keyup', _onKeyPress);
 
