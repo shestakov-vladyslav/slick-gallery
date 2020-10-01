@@ -136,6 +136,9 @@ let SlickGallery = (() => {
             ]
         });
 
+        _config.$image_frame.slick("refresh");
+        _config.$previewSlick.slick("refresh");
+
         $(window).on('keyup', _onKeyPress);
 
         $image_frame.off();
@@ -151,7 +154,7 @@ let SlickGallery = (() => {
 
         _config.$slider = $slider;
 
-        setTimeout(() => _initSliders($img), 150);
+        setTimeout(() => _initSliders($img), 0);
     };
 
     let _hideGallery = () => {
