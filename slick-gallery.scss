@@ -21,7 +21,7 @@ $secondary_color: #eee;
     z-index: 999;
     align-items: center;
     justify-content: center;
-    padding: 120px 10px 0;
+    padding: 20px 10px 0;
     box-sizing: border-box;
 
     @media (max-width: 768px){
@@ -175,7 +175,7 @@ $secondary_color: #eee;
         grid-template-columns: 135px minmax(0, 1fr) 135px;
         grid-gap: 20px;
         align-items: center;
-        height: calc(100vh - 300px);
+        height: calc(100vh - 200px);
 
         @media (max-width: 768px){
             grid-template-columns: 1fr;
@@ -185,7 +185,7 @@ $secondary_color: #eee;
 
     &__close{
         position: absolute;
-        top: -120px;
+        top: -20px;
         right: 0;
         width: 100px;
         height: 100px;

@@ -27,7 +27,6 @@ let SlickGallery = (() => {
     };
 
     let _onKeyPress = (e) => {
-        console.log(e.key);
         switch(e.key){
             case 'Escape':
                 _hideGallery();
@@ -46,7 +45,7 @@ let SlickGallery = (() => {
         let ipadOS = (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) && !window.MSStream;
 
         if(iOS || ipadOS) window.addEventListener("touchstart", _onClick, { passive: false }); 
-        else $(window).on('mousedown', _onClick);
+        else $(window).on('click', _onClick);
     };
 
     const arrowIcon = '<svg width="19px" height="19px" xmlns="http://www.w3.org/2000/svg"> <g>  <g id="svg_5">   <line fill="none" stroke="#C4A278" x1="-0.962253" y1="9.718406" x2="17.511029" y2="9.64207" id="svg_1" stroke-linejoin="undefined" stroke-linecap="undefined" stroke-width="2"/>   <line fill="none" stroke="#C4A278" x1="8.718832" y1="18.481481" x2="18.108145" y2="9.015832" id="svg_2" stroke-linejoin="undefined" stroke-linecap="undefined" stroke-width="2"/>   <line fill="none" stroke="#C4A278" x1="8.721798" y1="10.280464" x2="18.111111" y2="0.814815" id="svg_3" stroke-linejoin="undefined" stroke-linecap="undefined" transform="rotate(90, 13.4165, 5.54764)" stroke-width="2"/>  </g> </g></svg>';
@@ -153,6 +152,9 @@ let SlickGallery = (() => {
         setTimeout(function(){
             $image_frame.slick("refresh");
             $preview_box.slick("refresh");
+
+            _config.$image_frame.slick('slickNext');
+            _config.$image_frame.slick('slickPrev');
         }, 250);
 
         $(window).on('keyup', _onKeyPress);
