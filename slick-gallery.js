@@ -90,6 +90,8 @@ let SlickGallery = (() => {
         let $image_frame = $(_classes.image_frame);
         let $preview_box = $(_classes.preview_box);
 
+        if($slides.length == 0) $slides = _config.$slider.find('img');
+
         let index = 0;
 
         $image_frame.html("");
