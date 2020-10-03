@@ -81,7 +81,7 @@ let SlickGallery = (() => {
     };
 
     let _initSliders = ($img) => {
-        let original_url = $img.attr('data-lazy') || $img.attr('src');
+        let original_url = $img.attr('data-lazy') || $img.attr('data-src') || $img.attr('src');
 
         if(_config.$image_frame) _config.$image_frame.slick('unslick');
         if(_config.$previewSlick) _config.$previewSlick.slick('unslick');
@@ -90,23 +90,35 @@ let SlickGallery = (() => {
         let $image_frame = $(_classes.image_frame);
         let $preview_box = $(_classes.preview_box);
 
-        if($slides.length == 0) $slides = _config.$slider.find('img');
-
         let index = 0;
 
         $image_frame.html("");
         $preview_box.html("");
 
-        $slides.each(function(i, elem){
-            let $slide = $(elem);
-            let $img = $slide.find('img').eq(0);
-            let url = $img.attr('data-lazy') || $img.attr('src');
+        if($slides.length == 0){
+            $slides = _config.$slider.find('img');
 
-            if(url == original_url) index = i;
-
-            $preview_box.append(`<div><img src='${url}' alt=''></div>`);
-            $image_frame.append(`<div><img src='${url}' alt=''></div>`);
-        });
+            $slides.each(function(i, img){
+                let $img = $(img);
+                let url = $img.attr('data-lazy') || $img.attr('data-src') || $img.attr('src');
+    
+                if(url == original_url) index = i;
+    
+                $preview_box.append(`<div><img src='${url}' alt=''></div>`);
+                $image_frame.append(`<div><img src='${url}' alt=''></div>`);
+            });
+        }else{
+            $slides.each(function(i, elem){
+                let $slide = $(elem);
+                let $img = $slide.find('img').eq(0);
+                let url = $img.attr('data-lazy') || $img.attr('data-src') || $img.attr('src');
+    
+                if(url == original_url) index = i;
+    
+                $preview_box.append(`<div><img src='${url}' alt=''></div>`);
+                $image_frame.append(`<div><img src='${url}' alt=''></div>`);
+            });
+        }
 
         _config.$image_frame = $image_frame.slick({
             infinite: false,
